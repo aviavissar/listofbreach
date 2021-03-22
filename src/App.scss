@@ -1,0 +1,194 @@
+$dark-background: #272727;
+$dark-border: #525151;
+$dark-font: #ffffff;
+
+$light-background: #e0e0e0;
+$light-border: #fffbfbe8;
+$light-font: black;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI","Oxygen",  "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 17px;
+  &.dark {
+    background-color: $dark-background;
+    color: $dark-font !important;
+  }
+  &.light {
+    background-color: $light-background;
+    color: $light-font !important;
+  }
+}
+
+.App {
+  text-align: center;
+  width: 98%;
+  margin: 10px auto;
+}
+
+.breach-details {
+  margin: 2px 20px;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &.title {
+    min-width: 250px;
+  }
+}
+
+.breach-details img {
+  align-self: center;
+  width: 50px;
+  padding: 5px;
+}
+.breach-details .img {
+  width: 70px;
+  margin: 3px 27px 3px 57px;
+  padding: 2px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.MuiPaper-root .MuiAccordionSummary-root {
+  display: flex;
+  padding: 10px 16px;
+  height: 60px;
+  transition: min-height 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.breach-titles {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 20px 0;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  width: 98%;
+  margin: 10px auto;
+  padding: 32px 15px;
+}
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.breach-list {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dark {
+  .breach-details .img {
+    background-color: darken($dark-background, 5);
+    border: 1px solid $dark-border;
+  }
+  .MuiPaper-root .MuiAccordionSummary-root {
+    background-color: $dark-background;
+  }
+  h3 {
+    color: $dark-font;
+  }
+  .MuiPaper-root {
+    color: $dark-font;
+    background-color: $dark-border;
+  }
+  .breach,
+  .breach-list {
+    background-color: $dark-border;
+  }
+}
+.light {
+  .breach-details .img {
+    background-color: darken($light-background, 5);
+    border: 1px solid $light-border;
+  }
+  .MuiPaper-root .MuiAccordionSummary-root {
+    background-color: $light-background;
+  }
+  h3 {
+    color: $light-font;
+  }
+  .MuiPaper-root {
+    color: $light-font;
+    background-color: $light-border;
+  }
+  .breach,
+  .breach-list {
+    background-color: $light-border;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .App {
+    text-align: left;
+    padding: 2px;
+    font-size: 0.7rem;
+  }
+  .App-header {
+    padding: 10px 5px;
+    width: 100%;
+    min-height: 7vh;
+    z-index: 50;
+    margin: -2px -2px 0px -2px;
+  }
+  .breach-details {
+    margin: 1px 0px 1px 8px;
+    width: 21vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: initial;
+    &.title {
+      min-width: 12vw;
+    }
+  }
+  .breach-list {
+    padding: 1px;
+  }
+  .breach-details .img {
+    width: 51px;
+    margin: 3px;
+    padding: 2px;
+    height: 50px;
+  }
+  .breach-details img {
+    align-self: center;
+    width: 42px;
+    padding: 5px;
+  }
+  .MuiPaper-root {
+    width: 100%;
+  }
+  h3{font-size: 0.75rem;}
+  .domaim {
+    width: 24vw;
+  }
+  h3.domain {
+    position: relative;
+    right: -5px;
+  }
+  h3.date {
+    position: relative;
+    right: 10px;
+  }
+  h3.logo {
+    position: relative;
+    right: -8px;
+  }
+}
