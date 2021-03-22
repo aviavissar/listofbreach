@@ -17,7 +17,7 @@ const Breach = ({ breach, indx }) => {
         setExpanded("panel" + indx);
       }
     }
-  }, []);
+  }, [indx]);
 
   const handleChange = (panel) => (event, newExpanded) => {
     if (newExpanded) {

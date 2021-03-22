@@ -2,7 +2,6 @@ import React,{ useState, useEffect } from 'react';
 import styled from "styled-components/macro";
 import media from "styled-media-query";
 import BreachesList from './view/BreachesList';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
 
 const App = () => {
